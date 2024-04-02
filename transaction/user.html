@@ -1,0 +1,74 @@
+<html>
+<head>
+    <title>user</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<style>
+    .bg{
+    background:linear-gradient(to bottom right,#BBE7FE,#D3B5E5,#FFD4DB,#EFF1DB);
+     height:600px;
+     width:100%;
+    }
+ .demo{
+    border-radius:5px;
+    border:3px solid blue;
+    height:350px;
+    width:500px;
+    background-color: white;
+    justify-content:center;
+     margin-left:420px;
+     } 
+</style>
+</head>
+<body>
+   <div class="alert container bg-primary" style="display:none;" id="popup">
+    <label style="color:white;">CHOOSE YOUR OPTION EITHER YOU WANT TO DO</label>
+    <button class="btn btn-warning" onclick="two()">DEBIT</button>
+    <button class="btn btn-warning" onclick="three()">CREDIT</button>
+   </div>
+   <div class="bg">
+        <h1 style="font-family:Georgia;font-size:70px;color:yellow;margin-top:5px;"><center>ABC BANK</center></h1><br/>
+        
+        <div class="demo">
+        <h3><center><b><u>USER DETAILS</u></b></h3>
+    <ul>
+       <li><h3>A/C HOLDER NAME: p.varshini</h3></li>
+       <li><h3>A/C NUMBER:  112233445566</h3></li>
+       <li><h3>IFSC code:  Abc1056</h3></li>
+       <li><h3>A/C BALANCE: 50000</h3></li><br/>
+    </ul>
+        <button class="btn btn-success ml-4 p-3" onclick="one()">GO BACK TO HOME</button>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+        <button class="btn btn-success p-3" onclick="transaction()">TRANSACTION</button>
+    </div>
+</div>
+<script>
+    function one(){
+        location.href=("account.html");
+    }
+</script>
+<script>
+    function transaction(){
+        document.getElementById("popup").style.display="block";
+    }
+</script>
+<script>
+    function two(){
+        location.href=("debit.html");  
+    }
+</script>
+<script>
+    function three(){
+        location.href=("credit.html");  
+    }
+    
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>PRODUCTS</title>
+    <style>
+        header{
+            width:100%;
+            height:110px;
+            position:sticky;
+            background-color:#140005;
+          }
+        .box{
+            margin-left:50px;
+            }
+        .one{
+            display:inline-flex;
+            margin-left:80px;
+        }
+        .two{
+            display:inline-flex; 
+            margin-left:80px; 
+        }
+    </style>
+    </head>
+    <body>
+        <header>
+            <a href="shopping.html"><img src="images/shoplogo.png" style="height:100px;width:100px;"></a>
+            <button class="btn btn-outline-warning" style="margin-left:850px;font-size:20px;border-radius:20px;width:200px;"><i class="fa-solid fa-magnifying-glass"></i>SEARCH</button>
+            <i class="fa-solid fa-camera-retro" style="font-size:30px;margin-left:15px;color:orange;"></i>
+          </header><br/><br/>
+        <form action="" style="margin-left:370px;">
+<input type="number" placeholder="starting price" id="minvalue"/>
+<input type="number" placeholder="Ending price" id="maxvalue"/>
+<input type="button" class="submit btn btn-success" value="FILTER"/>
+        </form>
+        <div class="mainbox">
+            <h1 style="font-family:geogria;color:blue;"><b><center><u>FOOTWEAR</u></center></b></h1>
+            <div class="one">
+            <div class="box" data-value="700" style="border:2px solid;box-shadow: 20px 20px lightblue;">
+            <img src="images/gslip1.jpg" height="300px" width="300px"/>
+            <h5 style="font-family:geogria;"><b><center>BRAND:U.S. Polo Association</center></b></h5>
+            <p class="box" data-value="700"><center>PRICE:700/-</center></p>
+            </div>
+            <div class="box" data-value="800" style="border:2px solid;box-shadow: 20px 20px lightblue;">
+            <img src="images/gslip2.jpg" height="300px" width="300px" />
+            <h5 style="font-family:geogria;"><b><center>BRAND:Tommy Hilfiger</center> </b></h5>
+            <p class="box" data-value="800"><center>PRICE:800/-</center></p>
+            
+            </div>
+            <div class="box" data-value="900"  style="border:2px solid;box-shadow: 20px 20px lightblue;">
+            <img src="images/gslip3.jpg" height="300px" width="300px"/>
+            <h5 style="font-family:geogria;"><b><center>BRAND:Allen Solly</center></b></h5>
+            <p class="box" data-value="900"><center>PRICE:900/-</center></p>
+            
+            </div>
+        </div><br/><br/><br/><br/>
+        <div class="two">
+            <div class="box" data-value="1000" style="border:2px solid;box-shadow: 20px 20px lightblue;">
+            <img src="images/gslip4.jpg" height="300px" width="300px"  />  
+            <h5 style="font-family:geogria;"><b><center>BRAND:Peter England</center></b></h5>  
+            <p class="box" data-value="1000"><center>PRICE:1000/-</center></p>
+            
+            </div>
+            <div class="box" data-value="1100" style="border:2px solid;box-shadow: 20px 20px lightblue;">
+            <img src="images/gslip5.jpg" height="300px" width="300px" />
+            <h5 style="font-family:geogria;"><b><center>BRAND:RICHLOOK </center></b></h5>
+            <p class="box" data-value="1100"><center>PRICE:1100/-</center></p>
+            
+            </div>
+            <div class="box" data-value="1200" style="border:2px solid;box-shadow: 20px 20px lightblue;"> 
+                <img src="images/gslip6.jpg" height="300px" width="300px" />
+                <h5 style="font-family:geogria;"><b><center>BRAND:Levi’s</center></b></h5> 
+            <p class="box" data-value="1200"><center>PRICE:1200/-</center></p>
+           
+            </div>
+        </div>
+        </div>
+                <script>
+                    subBtn=document.querySelector('.submit');
+                    let datavalue=document.querySelectorAll('.box');
+                    datavalue.forEach(function(Item){
+                        subBtn.addEventListener('click',function(){
+                            let min=document.getElementById("minvalue").value;
+                            let max=document.getElementById("maxvalue").value;
+                            minPI=parseInt(min);
+                            maxPI=parseInt(max);
+                            let dataItems=Item.getAttribute('data-value');
+                            if(dataItems>=minPI && dataItems<=maxPI){
+                                Item.style.display="block";
+                        
+                            }
+                            else{
+                                Item.style.display="none";
+                            }
+                        })
+                    })
+                </script>
+
+    </body>
+    </html>
